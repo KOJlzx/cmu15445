@@ -16,7 +16,7 @@
 
 namespace bustub {
 
-TEST(LRUKReplacerTest, DISABLED_SampleTest) {
+TEST(LRUKReplacerTest, SampleTest) {
   LRUKReplacer lru_replacer(7, 2);
 
   // Scenario: add six elements to the replacer. We have [1,2,3,4,5]. Frame 6 is non-evictable.
@@ -42,6 +42,7 @@ TEST(LRUKReplacerTest, DISABLED_SampleTest) {
   // first based on LRU.
   int value;
   lru_replacer.Evict(&value);
+
   ASSERT_EQ(2, value);
   lru_replacer.Evict(&value);
   ASSERT_EQ(3, value);
